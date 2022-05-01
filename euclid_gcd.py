@@ -1,16 +1,16 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def euclid_gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return euclid_gcd(b, a % b)
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    print("------------------------------------------------------------")
+    print("Calculate the GCD of two values using Euclid's GCD algorithm")
+    print("------------------------------------------------------------\n")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    a_input = int(input("Enter the first integer: "))
+    b_input = int(input("Enter the second integer: "))
+    print(f"\nGCD: {euclid_gcd(a_input, b_input)}\n")
+
